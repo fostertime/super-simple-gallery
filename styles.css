@@ -1,0 +1,50 @@
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;}
+body {line-height:1;}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {display:block;}
+a {margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent;}
+hr {display:block;height:1px;border:0;border-top:1px solid #cccccc;margin:1em 0;padding:0;}
+body {background-color: #f8f8f8;font-family: sans-serif;}
+
+#page {max-width: 500px;margin: 20px auto 20px;}
+#page .base {height: 375px;margin-bottom: 60px;width: 500px;}
+#page h1 {color: #555555;font-size: 17px;margin: 0 0 4px;}
+
+/* FIGURE STYLES */
+figure { width: 500px; height: 375px; position: relative; }
+figure > div.slides > img, figure > div.slides > div { display: none; position: absolute; }
+
+/* ARROW STYLES */
+span.arrows { color: #777777; cursor: pointer; position: absolute; display: block; font-size: 33px; height: 30px; width: 42px; }
+span.arrows.next {bottom: -25px; right: 0; text-align: right; }
+span.arrows.prev {bottom: -25px; left: 0; }
+span.arrows.prev:after { content: "\2190"; }
+span.arrows.next:after { content: "\2192"; }
+
+/* DOT STYLES */
+div.dots { bottom: -20px; left: 0; margin: 0 auto; position: absolute; right: 0; }
+div.dots > span {
+    background-color: #DDDDDD;
+    border-radius: 10px 10px 10px 10px;
+    cursor: pointer;
+    display: block;
+    float: left;
+    height: 10px;
+    margin: 2px;
+    position: relative;
+    width: 20px;
+}
+.dots > span.active { background-color: #888888; }
+
+/* Content Divs Example Styles */
+div.ssgThree .slides > div {
+    background: none repeat scroll 0 0 #EEEEEE;
+    border: 1px solid #DDDDDD;
+    color: #777777;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    height: 175px;
+    padding: 99px 0;
+    text-align: center;
+    width: 498px;
+}

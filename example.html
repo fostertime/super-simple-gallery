@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+
+<title>Super Simple Gallery</title>
+
+</head>
+
+<body>
+
+<div id="page">
+	
+    <h1>Default Usage</h1>
+    <div class="base ssgOne">
+    	<img src="images/tulips.jpg" />
+        <img src="images/koala.jpg" />
+        <img src="images/flower.jpg" />
+        <img src="images/penguins.jpg" />
+    </div>
+    
+    <h1>AutoStart Enabled</h1>
+    <div class="base ssgTwo">
+    	<img src="images/tulips.jpg" />
+        <img src="images/koala.jpg" />
+        <img src="images/flower.jpg" />
+        <img src="images/penguins.jpg" />
+    </div>
+    
+    <h1>Content Divs with Data-Link attributes set</h1>
+    <div class="base ssgThree">
+        <div data-link="http://www.google.com">Slide One: Links to Google using the data-link attribute</div>
+        <div data-link="http://www.github.com">Slide Two: Links to Github using the data-link attribute</div>
+        <div data-link="http://www.twitter.com">Slide Three: Links to Twitter using the data-link attribute</div>
+        <div data-link="http://www.imdb.com">Slide Four: Links to IMDb using the data-link attribute</div>
+    </div>
+    
+</div>
+
+<div class="copyright">&copy; 2012 Ten Cities Media || <a href="http://tencitiesmedia.com" target="_blank">tencitiesmedia.com</a></div>
+
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="jQuery.ssg.1.1.js"></script>
+
+<script>
+
+(function($)
+{
+	// Default Usage
+	$('div.ssgOne').ssg();
+	
+	// AutoStart and Duration Set
+	$('div.ssgTwo').ssg(
+	{
+		autostart: true, // auto starts the gallery
+		duration: 3000 // default is 5000 (5s)
+	});
+	
+	// Custom links per slide.
+	// Simply add data-link="yourlinkhere.html" to the slide element
+	// Example: <div class="ssgOne" data-link="http://www.google.com"> { ... Your Slide Content ... } </div>
+
+	$('div.ssgThree').ssg();
+			 
+})( jQuery );
+</script>
+
+</html>
