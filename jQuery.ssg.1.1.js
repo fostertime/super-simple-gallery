@@ -26,17 +26,17 @@
  {
 	"use strict";
 	
-	var name  				= 'ssg-tcm';
+	var name = 'ssg-tcm';
 
 	var i;
-	var sTimer 				= null;
-	var cWidth 				= 0;
+	var sTimer = null;
+	var cWidth = 0;
 
 	function tcmSSG(el, opts)
 	{
-		this.$el			= $(el);
-		this.opts			= opts;
-		this.defaults		=
+		this.$el = $(el);
+		this.opts = opts;
+		this.defaults =
 		{
 			autostart: false,
 			href: null,
@@ -47,10 +47,10 @@
 			duration: 5000
 		};
 
-		this.opts			= $.extend(this.defaults, opts);
-		this.slidesIndex	= this.$el.children().length;
-		var holder			= this.$el.children().detach();
-		var dots 			= '<span class="active"></span>\n';
+		this.opts = $.extend(this.defaults, opts);
+		this.slidesIndex = this.$el.children().length;
+		var holder = this.$el.children().detach();
+		var dots = '<span class="active"></span>\n';
 
 		this.$el.append( this.SSGLayout() );
 		this.$el.find('.slides').append(holder);
@@ -61,12 +61,12 @@
 		}
 		this.$el.find('.dots').append(dots);
 		
-		this.$slides    	= this.$el.find('.slides');
-		this.$dots      	= this.$el.find('.dots');
-		this.$dot	    	= this.$el.find('.dots').children('span');
-		this.$singleDot 	= this.$el.find('.dots span:first-child');
-		this.$arrows		= this.$el.find('span.arrows');
-		this.$SSGSlide  	= this.$el.find('.slides').children();
+		this.$slides = this.$el.find('.slides');
+		this.$dots = this.$el.find('.dots');
+		this.$dot = this.$el.find('.dots').children('span');
+		this.$singleDot = this.$el.find('.dots span:first-child');
+		this.$arrows = this.$el.find('span.arrows');
+		this.$SSGSlide = this.$el.find('.slides').children();
 		
 		this.$slides.children(':first').fadeIn(1000).addClass('active');
 		
